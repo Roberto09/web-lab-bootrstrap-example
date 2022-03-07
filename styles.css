@@ -1,0 +1,112 @@
+body {
+    background-color: cornsilk;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+h1 {
+    color: darkblue;
+    font-style: italic;
+}
+
+h2 {
+    max-width: 600px;
+}
+
+p {
+    color: darkslategrey;
+    font-family: "Lucida Console", "Courier New", monospace;
+    max-width: 600px;
+}
+
+li.custom{
+    background: lightcyan;
+    padding: 5px;
+}
+
+ol.a {
+    list-style-type: lower-greek;
+}
+
+ul.a, ol.a{
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+}
+
+ul.a {
+    list-style-type: square;
+}
+
+table, th, td {
+    border: 1px solid black;
+    width: 50%;
+}
+
+p.footer {
+    color: darkblue;
+    font-style: italic;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* 
+.nav_center {
+    display: flex;
+    flex-basis: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    flex-direction: row;
+} */
+
+.center_text{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.center_all{
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    align-items: center;
+  }
+
+#profile {
+    max-width: 300px;
+}
+
+.scroll_400{
+    height: 400px;
+    overflow: scroll;
+}
+/* 
+nav{
+    background-color: lightgrey;
+    padding: 10px;
+}
+
+@media (max-width: 800px) {
+    .nav_center {
+      flex-direction: column;
+    }
+    form{
+        display: block;
+    }
+  }
+
+.nav_elem{
+    padding: 10px;
+} */

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tarea 1 - Bootrstrap</title>
+        <meta charset = "UTF8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"> -->
+        <!-- <script src="https://code.jquery.com/jquery0.12.4.js"></script> -->
+        <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+        <script>
+            $(document).ready(function(){
+                $(".center").hide().fadeIn(3000);
+                setInterval(function() {
+                $('h1').animate( { color: 'blue' }, 1000)
+                    .animate( { color: 'green' }, 1000);
+                }, 2000);
+                $(".toast").toast("show");
+                $('[data-toggle="popover"]').popover();
+                $("#exampleModal").modal("show");
+            });
+        </script>
+   
+    </head>
+    <body>
+        <header>
+            <h1>Roberto Garcia</h1>
+            <h2>ITC Campus MTY</h2>
+            <hr>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mi pagina</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        <main>
+            <br>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Bienvenido! Soy Roberto. Esta pagina contiene un poco sobre mi.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Si quieres continuar aprendiendo sobre mi vida como estudiante de ITC continua en esta pagina! 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido!</button>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- <div> -->
+                <!-- <img class="center" id="profile" src="profile.jpeg"> -->
+            <!-- </div> -->
+            <div class="card center" style="width: 18rem;">
+            <img class="card-img-top" src="profile.jpeg"> 
+            <div class="card-body">
+                <h5 class="card-title">Roberto Garcia</h5>
+                <p class="card-text">ITC 2022</p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                <button type="button" class="btn btn-lg btn-primary" data-toggle="popover"
+                    title="Soy un estudiante de ITC esperando graduarme en 2022, me gusta data-science y programacion comeptitiva."
+                    data-content="And here's some amazing content. It's very engaging. Right?">
+                Un poco sobre mi</button>
+            </div>
+            </div>
+            <p class="center_text"><strong>Naci</strong> en Monterrey, Nuevo Leon <span class="badge bg-secondary">Regio</span></p> 
+            
+            <p class="center">Conozco los <strong>Lenguajes de programacion</strong>:</p>
+            <div class="d-flex justify-content-center" style="margin-bottom:20px">
+            <ul class="list-group" style="min-width: 600px">
+            <li class="list-group-item list-group-item-primary">Python</li>
+            <li class="list-group-item list-group-item-secondary">C++</li>
+            </ul>
+            </div>
+
+            <p class="center">Conozco los <strong>editores de texto</strong>:</p>
+            <div class="d-flex justify-content-center" style="margin-bottom:20px">
+            <ul class="list-group" style="min-width: 600px">
+            <li class="list-group-item list-group-item-success">Vscode</li>
+            <li class="list-group-item list-group-item-danger">Nano</li>
+            </ul>
+            </div>
+
+            <p class="center">Conozco las <strong>bases de datos</strong>:</p>
+            <div class="d-flex justify-content-center" style="margin-bottom:20px">
+            <ul class="list-group" style="min-width: 600px">
+            <li class="list-group-item list-group-item-warning">Postresql</li>
+            <li class="list-group-item list-group-item-info">Firebase</li>
+            </ul>
+            </div>
+
+            <div class="dropdown d-flex justify-content-center">
+            <div class="btn-group">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="min-width:600px">
+                Librerias que conozco:
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item">Pytorch - Python</a></li>
+                <li><a class="dropdown-item">Numpy - Python</a></li>
+                <li><a class="dropdown-item">Pandas - Python</a></li>
+                <li><a class="dropdown-item">CUDA - C++</a></li>
+                <li><a class="dropdown-item">Intrinsicas - C+</a></li>
+                <li><a class="dropdown-item">OpenMP - C+</a></li>
+            </ul>
+            </div>
+            </div>
+
+            <p class="center" style="margin-top: 20px;"> <strong>He realizado practicas en: </strong></p>
+            <div class="center" style="max-width: 600px;">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    Facebook
+                </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+                    Se implementó un algoritmo de visión por computadora en el flujo de entrega de anuncios para mejorar las imágenes de productos de baja resolución para
+                    generar más valor para Instagram.
+                    Desarrollé y diseñé pipelines y uso de servicios para mejorar el flujo de productos donde optimizar
+                    consultas/segundo fue un componente crítico.
+                    Aproveché múltiples bases de código, API y lenguajes de programación (c ++, hack y sql) para crear servicios de pipelines.
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    Google
+                </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+                Trabajé en el equipo de ULR en la confiabilidad de la compatibilidad con el historial de ubicaciones para incógnito en Google Maps.
+                Creé una herramienta de prueba de extremo a extremo en el dispositivo para el equipo que automatiza y simula la dependencia humana y
+                procesos del dispositivo para garantizar la confiabilidad en modo ULR e incógnito.
+                Desarrollé nuevos experimentos de memoria para ULR para marcar desviaciones significativas en el uso de la memoria.
+                </div>
+                </div>
+            </div>
+            </div>
+            </div>    
+
+            <p class="center" style="margin-top:20px"><strong>Ciudades donde he estado como ITC:</strong></p>
+            <div class="center" style="max-width: 600px; margin-top: 20px;">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="mty.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="sf.jpg" class="d-block w-100" alt="...">
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+            </div>
+
+            <div style="width:100%" class="d-flex justify-content-end">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay=200000>
+            <div class="toast-header">
+                <strong class="me-auto">Bienvenido!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Bienvenido a mi pagina web! Aqui encontraras datos sobre mi.
+            </div>
+            </div>
+            </div>
+        </main>
+        <footer>
+            <hr>
+            <p><strong>Copyright by Roberto Garcia 2022. All rights reserved.</strong></p>
+        </footer>
+    </body>
+</html>
+
